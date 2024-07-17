@@ -1,28 +1,26 @@
 ---
 layout: default
-title: Connecting to Arjuna
+title: Connecting to Artemis
 parent: Getting Started
 nav_order: 2
 ---
 
-## Connecting to Arjuna
+## Connecting to Artemis
 
-Arjuna is located at `arjuna.psc.edu` to connect, enter the following into a
+Artemis is located at `lighthouse.arc-ts.umich.edu` to connect, enter the following into a
 terminal:
 
 ```shell
-ssh andrewID@arjuna.psc.edu
+ssh uniqname@lighthouse.arc-ts.umich.edu
 ```
 
-To connect to Arjuna, you must either be on the [campus network], connect via the [linux timeshare], or using [CMU's Full VPN].
+To connect to Artemis, you must either be on the [campus network] or using [UMICH's Full VPN].
 
-[campus network]: https://www.cmu.edu/computing/services/endpoint/network-access/
-[linux timeshare]: https://www.cmu.edu/computing/services/endpoint/software/how-to/timeshare-linux.html
-[CMU's Full VPN]: https://www.cmu.edu/computing/services/endpoint/network-access/vpn/how-to/
+[campus network]: https://its.umich.edu/enterprise/wifi-networks
+[UMICH's Full VPN]: https://its.umich.edu/enterprise/wifi-networks/vpn
 
-When you first log in to Arjuna, you will be prompted for a password.  Enter the password given to you by the Administrator who created your account. You will be immediately required to change it.
 
-### Arjuna's SSH key fingerprints
+### Artemis's SSH key fingerprints
 
 Public Key fingerprints are used to validate the connection to a remote server.
 When connecting to a server for the first time you will be prompted to verify
@@ -40,15 +38,15 @@ Arjuna's public key fingerprints are:
 > You **should not** connect to Arjuna if the fingerprints do not match.
 > Please open an [issue](https://github.com/ArjunaCluster/ArjunaUsers/issues)
 
-### Accessing Arjuna via CMU's Full VPN
+### Accessing Artemis via UMICH's Full VPN
 
-If you are not on campus, you must first connect to [CMU's Full VPN]. Once connected
-you can then `ssh` into Arjuna.
+If you are not on campus, you must first connect to [UMICH's Full VPN]. Once connected
+you can then `ssh` into Artemis.
 
 ## Configuring SSH
 
 The following steps are quality-of-life improvements to default ssh configuration.
-They are not required to use Arjuna.
+They are not required to use Artemis.
 
 ### Private Key Authentication
 
@@ -74,24 +72,24 @@ Now that you have a key pair, we need to transfer the *public* key to Arjuna.
 To do so, run the following command:
 
 ```shell
-ssh-copy-id andrewID@arjuna.psc.edu
+ssh-copy-id uniqname@lighthouse.arc-ts.umich.edu
 ```
 
-You will be prompted for your key's passphrase (if set) and your password for Arjuna.
+You will be prompted for your key's passphrase (if set) and your password for Artemis.
 You can now log in without entering your password!
 
 ### Using a SSH Config File
 
-You can simplify logging in to Arjuna by creating an `~/.ssh/config` file to
-specify common option (i.e. your username) or create an alias for Arjuna.
+You can simplify logging in to Artemis by creating an `~/.ssh/config` file to
+specify common option (i.e. your username) or create an alias for Artemis.
 
-For example, the following config will let you connect with `ssh arjuna`
-instead of having to type out the full `ssh andrewID@arjuna.psc.edu` each time.
+For example, the following config will let you connect with `ssh artemis`
+instead of having to type out the full `ssh uniqname@lighthouse.arc-ts.umich.edu` each time.
 
 ``` conf
-Host arjuna
-    User andrewID
-    HostName arjuna.psc.edu
+Host artemis
+    User uniquename
+    HostName lighthouse.arc-ts.umich.edu
 ```
 
 ### Sample SSH Configuration File
@@ -110,25 +108,12 @@ Host *
     AddKeysToAgent yes              # Automatically adds keys to your ssh-agent
     IdentityFile ~/.ssh/id_rsa      # This set your default key for authentication
 
-Host arjuna
-    User andrewID
+Host artemis
+    User uniquename
     ForwardAgent yes
     # Forward your SSH agent, so you use your machine's ssh-agent to authenticate
     # to other machines from Arjuna. This way you don't need to manage multiple
     # ssh keypairs to connect to a common service (i.e. GitHub)
-    HostName arjuna.psc.edu
-
-# Skip CMU's VPN and connect to Arjuna via unix.andrew.cmu.edu
-# You will be prompted for your CMU password to login to unix.andrew.cmu.edu
-# before being forwarded to Arjuna
-Host arjuna-jump
-    User andrewID
-    ForwardAgent yes
-    ProxyJump andrewID@unix.andrew.cmu.edu
-```
-
-For more configuration options see `man ssh_config` or
-[ssh_config's documentation](https://man.openbsd.org/ssh_config).
-
+    HostName lighthouse.arc-ts.umich.edu
 
 
