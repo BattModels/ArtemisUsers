@@ -8,9 +8,9 @@ nav_order: 3
 # Submitting Your First Job
 
 This tutorial will guide you through the process of submitting your first job on
-Arjuna. This tutorial assumes you've already done the following items
+Artemis. This tutorial assumes you've already done the following items
 
-1. Login to Arjuna via `ssh`
+1. Login to Artemis via `ssh`
 2. Some familiarity with entering commands at a `bash` shell
 3. Some familiarity with `vim` or another command-line file editor
 
