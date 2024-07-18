@@ -7,7 +7,7 @@ has_children: true
 ---
 # Getting Started
 
-This section contains documentation about connecting to Arjuna, submitting jobs
+This section contains documentation about connecting to Artemis, submitting jobs
 to [SLURM] and links to external resources.
 
 [SLURM]: https://slurm.schedmd.com/
