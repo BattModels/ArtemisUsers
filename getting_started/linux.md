@@ -8,7 +8,7 @@ nav_order: 5
 # Other Resources
 
 This page provides a collection of external resources for various topics related
-to utilizing Arjuna, navigating Linux, and related tools.
+to utilizing Artemis, navigating Linux, and related tools.
 
 ## General Linux
 
