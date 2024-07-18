@@ -17,7 +17,7 @@ You must run notebooks on the worker nodes, as described, in this tutorial.
 For using Jupyter Notebooks you will need to have:
 
 1. Visual Studio Code installed on your local machine with [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python), [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) and [Remote SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) extensions enabled.
-2. Installed Jupyter notebook on Arjuna (i.e. via [conda](https://docs.conda.io/en/latest/) or [spack](https://spack.readthedocs.io/en/latest/))
+2. Installed Jupyter notebook on Artemis (i.e. via [conda](https://docs.conda.io/en/latest/) or [spack](https://spack.readthedocs.io/en/latest/))
 
 ### Instructions
 1. Allocate an interactive worker node with the resources you need, for example:
