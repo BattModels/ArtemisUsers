@@ -6,7 +6,7 @@ nav_order: 1
 
 # Welcome!
 
-Arjuna is a multi-departmental CPU and GPU computing cluster. Here you can find
+Artemis is a multi-departmental CPU and GPU computing cluster. Here you can find
 documentation about what Arjuna is and how to use it.
 
 ## User Accounts
@@ -16,16 +16,16 @@ Common requests (New User, Forgot Password) are handled by [creating an issue][i
 
 ## Support
 
-If you encounter an issue using Arjuna, please [open an issue][issue] and let us know.
+If you encounter an issue using Artemis, please [open an issue][issue] and let us know.
 We will do our best to get it sorted out. Be sure to checkout our
 [Getting Started](./getting_started/index.md) guide for help with common tasks.
 
 ## Acknowledgement in Publications
 
-All publications resulting from the usage of Arjuna should include an acknowledgement.
+All publications resulting from the usage of Artemis should include an acknowledgement.
 We recommend the following text:
 
-> The computational portion of this work was performed on the Arjuna computer
+> The computational portion of this work was performed on the Artemis computer
 > cluster, which was funded through Carnegie Mellon College of Engineering and
 > the departments of Mechanical Engineering, Electrical and Computer Engineering
 > and Chemical Engineering.
