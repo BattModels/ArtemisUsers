@@ -1,86 +1,149 @@
 ---
 title: User Software
 layout: default
-parent: About Arjuna
+parent: About Artemis
 nav_order: 2
 ---
 
 # Software
+ARC provides pre-built software as [lmod](https://lmod.readthedocs.io/en/latest/index.html) modules for the *Intel* CPUs used on Great Lakes., However, Artemis uses *AMD* CPUs. Thus the provided modules **may or may not work** on Artemis.
+- Software built for a generic x86/x64 architecture should work
+- CPU-heavy codes should target the *specific microarchitecture* they run on
 
-Arjuna uses `modules` to provide access to some common software packages and tools.
-For a complete list of the currently available software run: `module avail`
+**ARC will not provide pre-built software for our CPUs**
 
-To load a module named `module_name` run: `module load module_name`
+Instead, you'll need to build your own software. I'd recommend using [spack](https://spack.io)
+- [UM ARC's Spack Documentation](https://arc.umich.edu/spack/)
+- [Spack's Documentation](https://spack.readthedocs.io/en/latest/)
+- [Spack's Tutorial](https://spack-tutorial.readthedocs.io/en/latest/)
+- [List of Available Spack Packages](https://packages.spack.io)
+- [Public Build Cache](https://cache.spack.io)
 
-For more information, see [Lmod's documentation](https://lmod.readthedocs.io).
-
-## Additional Software
-
-If you need additional software on Arjuna, we recommend installing it via spack. Many commonly used scientific and engineering packages are provided via the system-wide spack installation. For a full list of the currently installed spack packages run: `spack find`
-
-If a spack package is not available for the software you need, install it from source or binaries.
-
+> To get spack: `module load spack` to use the ARC provided instance or [[https://spack.readthedocs.io/en/latest/getting_started.html#installation]]
 
 ## Spack
+The following is a suggested configuration for using Spack on Artemis. See spack documentation for more information.
 
-[Spack](https://spack.io) is a package manager designed for high performance computing which allows for installation of various versions of softwares required for scientific computing. We provide some commonly used softwares, and you can supplement these by installing your own softwares with spack.
-
-For more information see [Spack Resources](../getting_started/linux.md#spack)
-
-
-You can install any of spack's packages by running:
-
-```shell
-spack install package_name
-```
-
-When spack packages are installed, they are accompanied by a modulefile. Therefore, to use it, you must either run:
-
-```shell
-spack load package_name
-```
-
-or
-
-```shell
-module load package_name
-```
-
-
-## MPI
-> This section will discuss usage of MPI on Arjuna, and presumes familiarity with MPI.
-
-Arjuna provides MPI support via the [OpenMPI](https://www.open-mpi.org/) version 4.1.3 module (`module load openmpi`).
-Users should load this module if they are using MPI. The following prior installations are deprecated and not recomended:
-
-- `module load openmpi/4.1.1`
-- MPI Installation at `/usr/local/mpirun`
-
-> `/usr/local/mpirun` is on the `PATH` by default. However it is **not supported**, and will be removed in the future.
-> Users are __strongly__ encouraged to use `module load openmpi` instead.
-
-Using legacy launchers (i.e. `mpirun` or `mpiexec`) is __not supported__ using the provided `openmpi` and __not recommended__ on other mpi installations. Please use `srun` to launch mpi jobs. 
-
-If users need a different version of MPI than the ones provided, they can install their own via spack or other build tools. Users are advised to first read the [slurm documentation regarding mpi](https://slurm.schedmd.com/mpi_guide.html) before installing MPI, and make sure to build MPI with PMI and slurm support.
-
-### PMI
-Arjuna has support for `pmi`, `pmi2`, and `pmix`. To run a job using a specified pmi, launch your jobs using the `--mpi` flag provided by `srun`. If you are unsure of what to use, we recommend trying `--mpi=pmix` first.
-
-### Interactive MPI Jobs
-Running MPI Jobs from within interactive jobs launched via `srun <options> --pty bash` is __not supported__ (and will hang). 
-
-
-### Example MPI Job
-
-
+In your `~/.bashrc` or equivalent:
 ```bash
-#!/bin/bash
-#SBATCH -N <N>
-#SBATCH -n <n>
-#SBATCH -A <account>
-#SBATCH -p <partition>
-
-module load openmpi/4.1.3
-srun --mpi=pmix <executable>
+# Load the spack module and unset SPACK_DISABLE_LOCAL_CONFIG
+# to enable user configuration files in ~/.spack/
+module load spack/0.21
+unset SPACK_DISABLE_LOCAL_CONFIG
 ```
 
+In `~/.spack/concretizer.yaml`
+```yaml
+concretizer:
+  targets:
+    # Lighthouse Login Nodes are Haswell, not Zen4
+    # Allow host to be incompatible so concretizing on the login
+    # nodes is possible
+    host_compatible: false
+```
+
+In `~/.spack/packages.yaml`
+```yaml
+packages:
+  openssl:
+    # Don't build your own OpenSSL.
+    # See: https://spack.readthedocs.io/en/latest/getting_started.html#openssl
+    externals:
+    - spec: openssl@1.1.1k
+      prefix: /usr
+    buildable: False
+
+  # Restrict to CUDA provided by ARC
+  # Realistically, you could install your own version of CUDA, but it's pretty heavy
+  # Note: 'cuda::' overrides the ARC provided defaults, this is needed cause cuda@12.3.0
+  # is not currently installed, but listed, causing issues.
+  # Note: This should be updated as new versions of CUDA are installed
+  cuda::
+    buildable: False
+    externals:
+    - spec: cuda@10.2.89
+      modules:
+      - cuda/10.2.89
+    - spec: cuda@11.2.2
+      modules:
+      - cuda/11.2.2
+    - spec: cuda@11.3.0
+      modules:
+      - cuda/11.3.0
+    - spec: cuda@11.5.1
+      modules:
+      - cuda/11.5.1
+    - spec: cuda@11.6.2
+      modules:
+      - cuda/11.6.3
+    - spec: cuda@11.7.1
+      modules:
+      - cuda/11.7.1
+    - spec: cuda@11.8.0
+      modules:
+      - cuda/11.8.0
+    - spec: cuda@12.1.1
+      modules:
+      - cuda/12.1.1
+
+  # Versions of cuDNN provided by ARCH
+  # Again, could install but a) space and b) get the actual files is tricky (install is easy)
+  # Note: This should be updated as new versions of cuDNN are installed
+  cudnn:
+    buildable: False
+    externals:
+    - spec: cudnn@8.3.1-10.2
+      modules:
+      - cudnn/10.2-v8.3.1
+    - spec: cudnn@8.1.1-11.2
+      modules:
+      - cudnn/11.2-v8.1.1
+    - spec: cudnn@8.2.1-11.3
+      modules:
+      - cudnn/11.3-v8.2.1
+    - spec: cudnn@8.3.1-11.5
+      modules:
+      - cudnn/11.5-v8.3.1
+    - spec: cudnn@8.4.1-11.6
+      modules:
+      - cudnn/11.6-v8.4.1
+    - spec: cudnn@8.7.0-11.7
+      modules:
+      - cudnn/11.7-v8.7.0
+    - spec: cudnn@8.7.0-11.8
+      modules:
+      - cudnn/11.8-v8.7.0
+    - spec: cudnn@8.9.0-12.1
+      modules:
+      - cudnn/12.1-v8.9.0
+
+  # The following applies for all packages
+  all:
+    # Check cuda_arch specification
+    require:
+    - one_of: ["cuda_arc=80,90", cuda_arch=80, cuda_arch=90]
+      when: +cuda
+      message: cuda_arch should be 80 (A100) or 90 (H100)
+
+    # Enable certain variants by default
+    variants:
+    - +cuda             # Enable cuda support when possible
+
+    # Artemis Worker Nodes are Zen4, keep x86_64 as a fallback
+    target: [zen4, x84_64]
+
+    # Sets preference for compilers
+    compiler:
+    - gcc
+    - clang
+    - aocc
+
+    # The following biases Spack towards AMD specific providers
+    providers:
+      blas: [amdblis, openblas]
+      fftw-api: [amdfftw, fftw]
+      flame: [amdlibflame, libflame]
+      lapack: [amdlibflame, openblas]
+      scalapack: [amdsclapack, netlib-scalapack]
+
+```
