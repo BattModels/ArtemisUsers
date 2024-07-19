@@ -39,7 +39,7 @@ nav_order: 1
 > FLOPs are listed in teraFLOPs ($10^{12}$ floating point operations per second). [[TC)](https://www.nvidia.com/en-us/data-center/tensor-cores/|Tensor Cores (TC)]] are specialized for general matrix multiplications (GEMM)
 
 ---
-# Partitions
+## Partitions
 | Partition        |   Nodes   | Max Wall Time | Priority | Max Jobs | Max Nodes |
 | ---------------- | :-------: | :-----------: | :------: | :------: | :-------: |
 | venkvis-cpu      |    CPU    |     48hrs     |          |          |           |
