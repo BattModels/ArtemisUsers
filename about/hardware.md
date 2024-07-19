@@ -141,8 +141,8 @@ The expected wait for a one-off job is ~1/2 the max wall time divided by the num
 | [Turbo](https://arc.umich.edu/turbo/), replicated              | `/nfs/turbo/coe-venkvis/`                                                                               | 10TB      | 500GB      | 13.02      | Fast, Automated regular backups                                               |
 | [scratch](https://arc.umich.edu/document/lighthouse-policies/) | `/scratch/venkvis_root/venkvis/`                                                                        | 10TB      | 500GB      |            | Fast, Auto-purged 60 days after last use                                      |
 | [DataDen](https://arc.umich.edu/data-den/)                     | Access via [Globus](https://app.globus.org/file-manager?origin_id=ab65757f-00f5-4e5b-aa21-133187732a01) | 100TB     | 5TB        | 1.67       | Tape Storage; Files should be between 10 - 200 GB, accessible only via Globus |
-| [/home](https://arc.umich.edu/document/greatlakes-policies/)   | `/home/<user>`                                                                                          | 80GB      |            |            | Fast, mounted on Turbo          
-                                              |
+| [/home](https://arc.umich.edu/document/greatlakes-policies/)   | `/home/<user>`                                                                                          | 80GB      |            |            | Fast, mounted on Turbo |
+
 - Node Local: Scratch files, temporary checkpoints
 - Turbo/ Home: Software, Environments, Code
 - scratch: Large Datasets *actively* being used, multi-node checkpoints
