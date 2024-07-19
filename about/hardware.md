@@ -37,7 +37,7 @@ nav_order: 1
 | [A100 SXM](https://www.nvidia.com/en-us/data-center/a100/) | 80GB |     2,039GB/s     | 9.7  |  19.5   |    156    |   312   |
 | [H100 SXM](https://www.nvidia.com/en-us/data-center/h100/) | 80GB |     3.34TB/s      |  34  |   67    |    989    |  1989   |
 
-> FLOPs are listed in teraFLOPs ($10^{12}$ floating point operations per second). [[TC)](https://www.nvidia.com/en-us/data-center/tensor-cores/|Tensor Cores (TC)]] are specialized for general matrix multiplications (GEMM)
+> FLOPs are listed in teraFLOPs ($10^{12}$ floating point operations per second). Tensor Cores ([TC](https://www.nvidia.com/en-us/data-center/tensor-cores/)) are specialized for general matrix multiplications (GEMM).
 
 ---
 ## Partitions
