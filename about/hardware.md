@@ -41,6 +41,7 @@ nav_order: 1
 
 ---
 ## Partitions
+
 | Partition        |   Nodes   | Max Wall Time | Priority | Max Jobs | Max Nodes |
 | ---------------- | :-------: | :-----------: | :------: | :------: | :-------: |
 | venkvis-cpu      |    CPU    |     48hrs     |          |          |           |
@@ -51,7 +52,7 @@ nav_order: 1
 
 - Usage is proportionate to the cost of the nodes you use
 - Usage (currently) does not reset; thus, your fair share priority *will not recover*
-- The *Max Jobs* limit is enforced using [[https://slurm.schedmd.com/resource_limits.html#qos_maxsubmitjobspu]]
+- The *Max Jobs* limit is enforced using [MaxSubmitJobsPerUser](https://slurm.schedmd.com/resource_limits.html#qos_maxsubmitjobspu)
 
 ___
 ## A Note on Fairshare
