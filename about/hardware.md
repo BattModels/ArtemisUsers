@@ -131,7 +131,7 @@ The expected wait for a one-off job is ~1/2 the max wall time divided by the num
 - ~2hrs for an *entire* CPU node
 
 --- 
-# Checkpointing and Requeing Jobs 
+## Checkpointing and Requeing Jobs 
 Have a really long job that you want to run? Here's how you do it:
 1. Submit the job to the queue
 2. Run for almost  the full max wall time
