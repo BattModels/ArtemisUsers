@@ -36,6 +36,7 @@ nav_order: 1
 | ---------------------------------------------------------- | :--: | :---------------: | :--: | :-----: | :-------: | :-----: |
 | [A100 SXM](https://www.nvidia.com/en-us/data-center/a100/) | 80GB |     2,039GB/s     | 9.7  |  19.5   |    156    |   312   |
 | [H100 SXM](https://www.nvidia.com/en-us/data-center/h100/) | 80GB |     3.34TB/s      |  34  |   67    |    989    |  1989   |
+
 > FLOPs are listed in teraFLOPs ($10^{12}$ floating point operations per second). [[TC)](https://www.nvidia.com/en-us/data-center/tensor-cores/|Tensor Cores (TC)]] are specialized for general matrix multiplications (GEMM)
 
 ---
@@ -47,6 +48,7 @@ nav_order: 1
 | venkvis-a100     |   A100    |     8hrs      |          |          |           |
 | venkvis-h100     |   H100    |     8hrs      |          |          |           |
 | debug            |    all    |  30 minutes   |   100    |    1     |     4     |
+
 - Usage is proportionate to the cost of the nodes you use
 - Usage (currently) does not reset; thus, your fair share priority *will not recover*
 - The *Max Jobs* limit is enforced using [[https://slurm.schedmd.com/resource_limits.html#qos_maxsubmitjobspu]]
@@ -138,7 +140,8 @@ The expected wait for a one-off job is ~1/2 the max wall time divided by the num
 | [Turbo](https://arc.umich.edu/turbo/), replicated              | `/nfs/turbo/coe-venkvis/`                                                                               | 10TB      | 500GB      | 13.02      | Fast, Automated regular backups                                               |
 | [scratch](https://arc.umich.edu/document/lighthouse-policies/) | `/scratch/venkvis_root/venkvis/`                                                                        | 10TB      | 500GB      |            | Fast, Auto-purged 60 days after last use                                      |
 | [DataDen](https://arc.umich.edu/data-den/)                     | Access via [Globus](https://app.globus.org/file-manager?origin_id=ab65757f-00f5-4e5b-aa21-133187732a01) | 100TB     | 5TB        | 1.67       | Tape Storage; Files should be between 10 - 200 GB, accessible only via Globus |
-| [/home](https://arc.umich.edu/document/greatlakes-policies/)   | `/home/<user>`                                                                                          | 80GB      |            |            | Fast, mounted on Turbo                                                        |
+| [/home](https://arc.umich.edu/document/greatlakes-policies/)   | `/home/<user>`                                                                                          | 80GB      |            |            | Fast, mounted on Turbo          
+                                              |
 - Node Local: Scratch files, temporary checkpoints
 - Turbo/ Home: Software, Environments, Code
 - scratch: Large Datasets *actively* being used, multi-node checkpoints
