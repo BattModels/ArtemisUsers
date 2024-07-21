@@ -13,9 +13,3 @@ ga_tracking: G-X2LPWRLJ7X
 includes:
   head:
     - custom-head.html
-
-defaults:
-  - scope:
-      path: "about"
-    values:
-      math: mathjax3
