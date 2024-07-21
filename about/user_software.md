@@ -19,7 +19,7 @@ Instead, you'll need to build your own software. I'd recommend using [spack](htt
 - [List of Available Spack Packages](https://packages.spack.io)
 - [Public Build Cache](https://cache.spack.io)
 
-> To get spack: `module load spack` to use the ARC provided instance or [[https://spack.readthedocs.io/en/latest/getting_started.html#installation]]
+> To get spack: `module load spack` to use the ARC provided instance or [install your own](https://spack.readthedocs.io/en/latest/getting_started.html#installation)
 
 ## Spack
 The following is a suggested configuration for using Spack on Artemis. See spack documentation for more information.
