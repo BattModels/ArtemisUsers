@@ -13,8 +13,10 @@ nav_order: 5
 -  [UM Lighthouse User Guide](https://arc.umich.edu/lighthouse/user-guide/)
 - [UM Great Lakes User Guide](https://arc.umich.edu/greatlakes/user-guide/)
 - [UM Cheat Sheet](https://arc.umich.edu/wp-content/uploads/sites/4/2020/05/Great-Lakes-Cheat-Sheet.pdf)
+
 ## Tmux
 Lighthouse and GreatLakes use multiple login nodes for load balancing/redundancy. To persist a session across login nodes, change where tmux creates its sockets:
+
 ```bash
 # Goes in your ~/.bashrc
 export TMUX_TMPDIR=~/.local/state/tmux
@@ -22,6 +24,7 @@ mkdir -p -m 700 $TMUX_TMPDIR
 ```
 
 > This won't apply until you've killed tmux on *all login nodes* with `tmux kill-server` and loaded your shell (Log out and back in again)
+
 ## Setting up Turbo / Scratch
 ```bash
 # Create a folder on turbo
