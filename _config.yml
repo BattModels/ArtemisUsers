@@ -11,4 +11,11 @@ search_enabled: true
 ga_tracking: G-X2LPWRLJ7X
 
 includes:
-  - custom-head.html
+  head:
+    - custom-head.html
+
+defaults:
+  - scope:
+      path: "about"
+    values:
+      math: mathjax3
