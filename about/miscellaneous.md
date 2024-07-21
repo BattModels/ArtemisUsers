@@ -40,7 +40,7 @@ If you're moving data between clusters, use [Globus](https://www.globus.org):
 - It's way faster than scp/rclone/rsync
 - On Arjuna use [Globus Connect Personal](https://www.globus.org/globus-connect-personal)
 
-[[https://arc.umich.edu/globus/#document-4]] (don't go using some rando endpoint)
+[UM ARC Endpoints](https://arc.umich.edu/globus/#document-4) (don't go using some rando endpoint)
 - [DataDen](https://app.globus.org/file-manager?origin_id=ab65757f-00f5-4e5b-aa21-133187732a01)
 - [Turbo](https://app.globus.org/file-manager?origin_id=8c185a84-5c61-4bbc-b12b-11430e20010f&origin_path=%2F)
 - [/home on Lighthouse](https://app.globus.org/file-manager?origin_id=3242c149-a2b9-4dba-9406-ae3717981621)
