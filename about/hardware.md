@@ -3,6 +3,7 @@ layout: default
 title: Cluster Architecture
 parent: About Artemis
 nav_order: 1
+math: mathjax3
 ---
 
 # Cluster Architecture
