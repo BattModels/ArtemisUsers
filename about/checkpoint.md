@@ -59,7 +59,7 @@ fi
 
 | Program                                                                                                                                                                                   | Restart | Signal Catching/Handling |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-----: | :----------------------: |
-| [[https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.plugins.environments.SLURMEnvironment.html#lightning.pytorch.plugins.environments.SLURMEnvironment.params.auto_requeue]] |   yes   |           yes            |
+| [PyTorch Lightning](https://lightning.ai/docs/pytorch/stable/api/lightning.pytorch.plugins.environments.SLURMEnvironment.html#lightning.pytorch.plugins.environments.SLURMEnvironment.params.auto_requeue) |   yes   |           yes            |
 | [Quantum Espresso](https://www.quantum-espresso.org/Doc/pw_user_guide/node20.html)                                                                                                        |   yes   |       experimental       |
 | [LAMMPs](https://docs.lammps.org/restart.html)                                                                                                                                            |   yes   |      no, see Python      |
 | [GPAW](https://wiki.fysik.dtu.dk/gpaw/documentation/restart_files.html)                                                                                                                   |   yes   |      no, see Python      |
