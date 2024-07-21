@@ -103,7 +103,7 @@ The `fair-share_factor` is (roughly) $U_{total} / (N U_{you})$, where $N$ is the
 
 ---
 ## Why not a longer Max Wall Time?
-> tl;dr: To keep the queue short. Use checkpointing for longer runs. [[#Checkpointing and Requeing Jobs|Details below]]
+> tl;dr: To keep the queue short. Use checkpointing for longer runs. [Details below](checkpoint.md)
 
 Let's assume a [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue)
 - Jobs arrive every $\lambda$ time units (Poisson Process)
