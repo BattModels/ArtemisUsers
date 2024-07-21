@@ -9,7 +9,7 @@ nav_order: 5
 
 ## Getting Help
 - The [Artemis slack channel](https://eeg-group.slack.com/archives/C070HCDCY9F)
-- [UM CoderSpaces Slack](https://umich.enterprise.slack.com/archives/C02T1M5QNH3) ([[https://documentation.its.umich.edu/node/352#JoinResign]])
+- [UM CoderSpaces Slack](https://umich.enterprise.slack.com/archives/C02T1M5QNH3) ([join](https://documentation.its.umich.edu/node/352#JoinResign))
 -  [UM Lighthouse User Guide](https://arc.umich.edu/lighthouse/user-guide/)
 - [UM Great Lakes User Guide](https://arc.umich.edu/greatlakes/user-guide/)
 - [UM Cheat Sheet](https://arc.umich.edu/wp-content/uploads/sites/4/2020/05/Great-Lakes-Cheat-Sheet.pdf)
