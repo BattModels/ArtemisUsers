@@ -12,4 +12,4 @@ ga_tracking: G-X2LPWRLJ7X
 
 includes:
   head:
-    - custom-head.html
+    - head-custom.html
