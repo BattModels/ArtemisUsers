@@ -4,8 +4,6 @@ url: https://arjunacluster.github.io
 baseurl: /ArtemisUsers/
 
 remote_theme: pmarsceill/just-the-docs
-plugins:
-  - jekyll-remote-theme # add this line to the plugins list if it's not there
 
 color_scheme: "light"
 search_enabled: true
