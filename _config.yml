@@ -11,3 +11,7 @@ color_scheme: "light"
 search_enabled: true
 
 ga_tracking: G-X2LPWRLJ7X
+
+includes:
+  head:
+    - custom-head.html
