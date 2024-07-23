@@ -49,22 +49,11 @@ We recommend the following text:
 
 ## Maintenance
 
-Artemis will be taken offline for periodic updates, maintenance, and upgrades. Users will be notified for the maintenance information [here](https://arc.umich.edu/tag/maintenance/) or via email. 
+Artemis will be taken offline for periodic updates, maintenance, and upgrades. Users will be notified for the maintenance information [here](https://arc.umich.edu/tag/maintenance/) or via [email](arc-support@umich.edu). 
 
 We intend to keep Artemis up for as much time as possible. However, planned
 periodic downtime for maintenance will likely improve total uptime and user
 experience by catching and fixing issues before they become disruptive.
-
-## Emails from the Admin Team
-
-The [Arjuna List Serve](https://lists.andrew.cmu.edu/mailman/listinfo/arjuna-users)
-is used to provide important information regarding planned maintenance, service
-interruptions or changes in policy. Users are strongly encouraged to subscribe to
-avoid missing out on critical information.
-
-Automated emails regarding disk usage, user accounts and other administrative issues
-are sent by `root@coe.psc.edu`. Some email provided may mark these emails as spam.
-Users should configure their email client to prevent this.
 
 ## Contributing
 
