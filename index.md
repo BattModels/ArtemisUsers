@@ -11,8 +11,12 @@ documentation about what Arjuna is and how to use it.
 
 ## User Accounts
 
-See [User Accounts](./about/accounts.md) for information about user accounts.
-Common requests (New User, Forgot Password) are handled by [creating an issue][issue].
+Fill out the [form](https://arc.umich.edu/login-request/) to apply for a user account.
+
+- College or Department: Engineering
+- Please describe … : Access to the Viswanathan’s cluster for ….
+- The ARC Services I need: “Great Lakes” and “Lighthouse”
+
 
 ## Support
 
