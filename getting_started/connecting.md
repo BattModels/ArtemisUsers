@@ -112,8 +112,12 @@ Host artemis
     User uniquename
     ForwardAgent yes
     # Forward your SSH agent, so you use your machine's ssh-agent to authenticate
-    # to other machines from Arjuna. This way you don't need to manage multiple
+    # to other machines from Artemis. This way you don't need to manage multiple
     # ssh keypairs to connect to a common service (i.e. GitHub)
     HostName lighthouse.arc-ts.umich.edu
 
+```
+
+For more configuration options see `man ssh_config` or
+[ssh_config's documentation](https://man.openbsd.org/ssh_config).
 
