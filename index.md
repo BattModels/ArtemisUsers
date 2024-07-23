@@ -49,16 +49,9 @@ We recommend the following text:
 
 ## Maintenance
 
-Arjuna will be taken offline for periodic updates, maintenance, and upgrades. We
-will provide at least two week's notice via the
-[list-serve](https://lists.andrew.cmu.edu/mailman/listinfo/arjuna-users)
-and via the login message on Arjuna.
+Artemis will be taken offline for periodic updates, maintenance, and upgrades. Users will be notified for the maintenance information [here](https://arc.umich.edu/tag/maintenance/) or via email. 
 
-- Summary of Planned Activities
-- Expected Duration
-- Mitigation steps (if any) users may need to take
-
-We intend to keep Arjuna up for as much time as possible. However, planned
+We intend to keep Artemis up for as much time as possible. However, planned
 periodic downtime for maintenance will likely improve total uptime and user
 experience by catching and fixing issues before they become disruptive.
 
