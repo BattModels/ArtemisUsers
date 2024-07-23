@@ -70,17 +70,14 @@ This usage is billed to the user's default account. To see your accounts run `sa
 
 ```
 sacctmgr show user $(whoami) WithAssoc WOPLimits
-      User   Def Acct     Admin    Cluster    Account  Partition     Share MaxJobs MaxNodes  MaxCPUs MaxSubmit     MaxWall  MaxCPUMins                  QOS   Def QOS
+      User   Def Acct     Admin    Cluster    Account  Partition     Share  Priority MaxJobs MaxNodes  MaxCPUs MaxSubmit     MaxWall  MaxCPUMins                  QOS   Def QOS
 ---------- ---------- --------- ---------- ---------- ---------- --------- ------- -------- -------- --------- ----------- ----------- -------------------- ---------
-      jdoe    example     None     arjuna     example    highmem         1
-      jdoe    example     None     arjuna   example-2        cpu         1
-      jdoe    example     None     arjuna     example       idle         1
-      jdoe    example     None     arjuna     example      debug         1
+      jdoe    venkvis0    None   greatlakes    engin1                    1                                      5000
+      jdoe    venkvis0    None   greatlakes  venkvis0                    1                                      5000
+      jdoe     venkvis    None    ighthouse   venkvis                    1                                      5000
 ```
 
-Here we can see that `jdoe` has `example` as their default account and can submit jobs to the `highmem`, `cpu`, `idle` and `debug` partitions. Our user `jdoe` does not have an entry for the `gpu` partition, so they can not submit to the `gpu` partition.
-
-To submit to the `cpu` partition, `jdoe` needs to use their `example-2` account. They can not submit to `cpu` using their default account. Use the `--account` flag to change the account used to submit a job. See [sbatch](https://slurm.schedmd.com/sbatch.html) for more information.
+Here we can see that `jdoe` has `venkvis0` and `venkvis` as their default account. See [sbatch](https://slurm.schedmd.com/sbatch.html) for more information.
 
 ## Additional Resources
 
