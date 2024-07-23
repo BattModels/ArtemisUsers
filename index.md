@@ -45,10 +45,7 @@ If you encounter an issue using Artemis, please refer to the followig resources:
 All publications resulting from the usage of Artemis should include an acknowledgement.
 We recommend the following text:
 
-> The computational portion of this work was performed on the Artemis computer
-> cluster, which was funded through Carnegie Mellon College of Engineering and
-> the departments of Mechanical Engineering, Electrical and Computer Engineering
-> and Chemical Engineering.
+> This research was supported in part through computational resources and services provided by Advanced Research Computing at the University of Michigan, Ann Arbor.
 
 ## Maintenance
 
