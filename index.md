@@ -57,7 +57,7 @@ experience by catching and fixing issues before they become disruptive.
 
 ## Contributing
 
-Thank you for wanting to contribute to Arjuna's Documentation! We recommend you
+Thank you for wanting to contribute to Artemis's Documentation! We recommend you
 first [open an issue][issue], but welcome [pull requests] to improve our documentation.
 
 [pull requests]: https://github.com/ArjunaCluster/ArjunaUsers/pulls
