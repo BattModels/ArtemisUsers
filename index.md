@@ -20,9 +20,25 @@ Fill out the [form](https://arc.umich.edu/login-request/) to apply for a user ac
 
 ## Support
 
-If you encounter an issue using Artemis, please [open an issue][issue] and let us know.
-We will do our best to get it sorted out. Be sure to checkout our
-[Getting Started](./getting_started/index.md) guide for help with common tasks.
+If you encounter an issue using Artemis, please refer to the followig resources:
+
+### Where to ask questions
+
+- [UM CoderSpaces Slack](https://umich.enterprise.slack.com/archives/C02T1M5QNH3) ([join](https://documentation.its.umich.edu/node/352#JoinResign))
+- Cross-post in #bridges, #arjuna-cluster in slack
+
+### Documentation
+
+- [UM Lighthouse User Guide](https://arc.umich.edu/lighthouse/user-guide/)
+- [UM Great Lakes User Guide](https://arc.umich.edu/greatlakes/user-guide/)
+- [UM Cheat Sheet](https://arc.umich.edu/wp-content/uploads/sites/4/2020/05/Great-Lakes-Cheat-Sheet.pdf)
+- [Slurm](https://slurm.schedmd.com/documentation.html)
+- [Spack](https://spack.readthedocs.io/en/latest/) ([UM](https://arc.umich.edu/spack/))
+
+### Tutorials
+
+- [Spack](https://spack-tutorial.readthedocs.io/en/latest/)
+- [HPC 101](https://www.dropbox.com/scl/fo/8b54mv1hcl3tovft1tz54/h?rlkey=lfo2mgcg9fi563p0fnpkesmrj&dl=0)
 
 ## Acknowledgement in Publications
 
