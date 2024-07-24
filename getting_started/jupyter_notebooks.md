@@ -24,10 +24,10 @@ For using Jupyter Notebooks you will need to have:
 
 ```bash
 # Request 1 cpu with 2G of memory for 1 hour
-srun -N 1 -n 1 -A <account> -p <partition> --mem=2G -t 01:00:00 --pty bash
+srun -N 1 -n 1 -p <partition> --mem=2G -t 01:00:00 --pty bash
 
-# The same, but with a gpu:
-srun -N 1 -n 1 -A <account> -p gpu --gres=gpu:1 --mem=2G -t 01:00:00 --pty bash
+# The same, but with a gpu (e.g. h100):
+srun -N 1 -n 1 -p venkvis-h100 --gres=gpu:h100:1 --mem=2G -t 01:00:00 --pty bash
 ```
 Replace `<account>` and `<partition>` with the appropriate account and
 [partition](../about/hardware#partitions).
@@ -44,10 +44,10 @@ After the wall of text, identify the server url containing the ip address of the
 worker node, something like:
 
 ```
-http://c022:8888/?token=a6935b8b842eb4d6916ea36dd76c7bf3d21c8c909f26aab1
+http://lh1702:8888/?token=a6935b8b842eb4d6916ea36dd76c7bf3d21c8c909f26aab1
 ```
 
-where `c022` is the hostname of the worker node. Copy it.
+where `lh1702` is the hostname of the worker node. Copy it.
 
 3. Start up Visual Studio Code and choose the server you just started. Do this
    by opening the command palette (usually `Cmd+Shift+P`) and search for
