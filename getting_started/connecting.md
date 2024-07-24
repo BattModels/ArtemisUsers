@@ -27,15 +27,15 @@ When connecting to a server for the first time you will be prompted to verify
 the authenticity of the server, by comparing the server's reported fingerprint to
 the expected fingerprint.
 
-Arjuna's public key fingerprints are:
+Artemis's public key fingerprints are:
 
 | Fingerprint | Key Type |
 | ----------- | -------- |
-| `SHA256:ZqL9rq+2S7T/1gfdtlITQ9KpsPO+jgTdU0mmN54Xklk` | RSA |
-| `SHA256:RWDQtpas1JNmy9/7vHpdMLA8QGG25RsNlfRWJSazecY` | ECDSA |
-| `SHA256:K/PT04x+Ohdtb68ogH1SC+kvFqUGrC+itbsXz/tcuB8` | ED25519 |
+| `SHA256:LwKoY7mWDU+TVxVODoxdY3bHFUYVVqUhcAX50VLgWfs` | RSA |
+| `SHA256:Dae1G3gu0mtro2Rm15U6l8aQg4bGFnDQJhmGH3k+fKs` | ECDSA |
+| `SHA256:9ho43xHw/aVo4q5AalH0XsKlWLKFSGuuw9lt3tCIYEs` | ED25519 |
 
-> You **should not** connect to Arjuna if the fingerprints do not match.
+> You **should not** connect to Artemis if the fingerprints do not match.
 > Please open an [issue](https://github.com/ArjunaCluster/ArjunaUsers/issues)
 
 ### Accessing Artemis via UMICH's Full VPN
@@ -68,7 +68,7 @@ passpharse to unlock your keys. Follow the prompts as directed.
 > Your private key `~/.ssh/id_rsa` is your password. Treat it as such and do
 > not copy it to insecure systems, display it in public space, etc.
 
-Now that you have a key pair, we need to transfer the *public* key to Arjuna.
+Now that you have a key pair, we need to transfer the *public* key to Artemis.
 To do so, run the following command:
 
 ```shell
