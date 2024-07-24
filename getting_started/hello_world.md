@@ -47,7 +47,7 @@ To submit the job, run the following command: `sbatch ~/hello_world.sh`.
 
 ```shell
 > sbatch ~/test.sh
-Submitted batch job 2970359
+Submitted batch job 21233811
 
 ```
 
@@ -56,7 +56,7 @@ Check the job's status in the queue using: `squeue -u $(whoami)`.
 ```shell
 > squeue -u $(whoami)
              JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-           2970359       gpu hello_wo  awadell PD       0:00      1 (None)
+           2970359 venkvis-h hello_wo  awadell PD       0:00      1 (None)
 
 ```
 
