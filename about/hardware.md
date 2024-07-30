@@ -107,26 +107,26 @@ The `fair-share_factor` is (roughly) $U_{total} / (N U_{you})$, where $N$ is the
 > tl;dr: To keep the queue short. Use checkpointing for longer runs. [Details below](checkpoint.md)
 
 Let's assume a [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue)
-- Jobs arrive every $\lambda$ time units (Poisson Process)
-- Run times take on average $1/\mu$ time units and are exponentially distributed
+- Jobs arrive every $$\lambda$$ time units (Poisson Process)
+- Run times take on average $$1/\mu$$ time units and are exponentially distributed
 - First-come, first-served queue (so no priority, fair share, or partitions)
 
 On average, the time from submission to job completion is:
-$$
+$$$
 \frac{1}{\mu - \lambda}
-$$
-The utilization is $\rho = \lambda/\mu$, if $\rho > 1$ the queue will grow unbounded. Otherwise, it's expected length is:
-$$ \frac{\rho}{1-\rho}$$
+$$$
+The utilization is $$\rho = \lambda/\mu$$, if $$\rho > 1$$ the queue will grow unbounded. Otherwise, it's expected length is:
+$$$ \frac{\rho}{1-\rho}$$$
 With a variance of:
-$$\frac{\rho}{(1-\rho)^2}$$
+$$$\frac{\rho}{(1-\rho)^2}$$$
 
 ---
 
 ## Expected Queue Lengths
 <iframe src="https://www.desmos.com/calculator/wtsunq4a2w?embed" width="500" height="250" style="border: 1px solid #ccc" frameborder=0></iframe>
 
-Plot of the queue length (red), it's variance (blue) and $+3\sigma$ band (green)
-- The expected queue length (red) rapidly increases as $\rho \to 1$
+Plot of the queue length (red), it's variance (blue) and $$+3\sigma$$ band (green)
+- The expected queue length (red) rapidly increases as $$\rho \to 1$$
 - The *variance* in queue length (blue) increases even faster
 
 The expected wait for a one-off job is ~1/2 the max wall time divided by the number of nodes
