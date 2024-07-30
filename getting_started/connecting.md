@@ -36,7 +36,7 @@ Artemis's public key fingerprints are:
 | `SHA256:9ho43xHw/aVo4q5AalH0XsKlWLKFSGuuw9lt3tCIYEs` | ED25519 |
 
 > You **should not** connect to Artemis if the fingerprints do not match.
-> Please open an [issue](https://github.com/ArjunaCluster/ArjunaUsers/issues)
+> Please open an [issue](https://github.com/BattModels/ArtemisUsers/issues)
 
 ### Accessing Artemis via UMICH's Full VPN
 

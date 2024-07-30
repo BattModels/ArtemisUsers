@@ -7,7 +7,7 @@ nav_order: 1
 # Welcome!
 
 Artemis is a multi-departmental CPU and GPU computing cluster. Here you can find
-documentation about what Arjuna is and how to use it.
+documentation about what Artemis is and how to use it.
 
 ## User Accounts
 
@@ -60,5 +60,5 @@ experience by catching and fixing issues before they become disruptive.
 Thank you for wanting to contribute to Artemis's Documentation! We recommend you
 first [open an issue][issue], but welcome [pull requests] to improve our documentation.
 
-[pull requests]: https://github.com/ArjunaCluster/ArjunaUsers/pulls
-[issue]: https://github.com/ArjunaCluster/ArjunaUsers/issues/
+[pull requests]: https://github.com/BattModels/ArtemisUsers/pulls
+[issue]: https://github.com/BattModels/ArtemisUsers/issues/
