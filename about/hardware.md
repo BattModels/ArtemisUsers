@@ -94,7 +94,7 @@ Job_priority =
 	... # Other stuff (Assoc Factor)
 ```
 
-The `fair-share_factor` is (roughly) $U_{total} / (N U_{you})$, where $N$ is the size of the group, $U_{total}$ is the total usage of the group and $U_{you}$ is your usage. 
+The `fair-share_factor` is (roughly) $$U_{total} / (N U_{you})$$, where $N$ is the size of the group, $$U_{total}$$ is the total usage of the group and $$U_{you}$$ is your usage. 
 - You can get a report with `sshare -lU` with `LevelFS` being your `fair-share_factor`
 - It's greater than 1 for under-served users
 - Between 0 and 1 for over-served users
@@ -112,13 +112,13 @@ Let's assume a [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue)
 - First-come, first-served queue (so no priority, fair share, or partitions)
 
 On average, the time from submission to job completion is:
-$$$
+$$$$
 \frac{1}{\mu - \lambda}
-$$$
+$$$$
 The utilization is $$\rho = \lambda/\mu$$, if $$\rho > 1$$ the queue will grow unbounded. Otherwise, it's expected length is:
-$$$ \frac{\rho}{1-\rho}$$$
+$$$$ \frac{\rho}{1-\rho}$$$$
 With a variance of:
-$$$\frac{\rho}{(1-\rho)^2}$$$
+$$$$\frac{\rho}{(1-\rho)^2}$$$$
 
 ---
 
