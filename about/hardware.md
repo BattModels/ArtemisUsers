@@ -38,7 +38,7 @@ math: mathjax2
 | [A100 SXM](https://www.nvidia.com/en-us/data-center/a100/) | 80GB |     2,039GB/s     | 9.7  |  19.5   |    156    |   312   |
 | [H100 SXM](https://www.nvidia.com/en-us/data-center/h100/) | 80GB |     3.34TB/s      |  34  |   67    |    989    |  1989   |
 
-> FLOPs are listed in teraFLOPs ($10^{12}$ floating point operations per second). Tensor Cores ([TC](https://www.nvidia.com/en-us/data-center/tensor-cores/)) are specialized for general matrix multiplications (GEMM).
+> FLOPs are listed in teraFLOPs ($$10^{12}$$ floating point operations per second). Tensor Cores ([TC](https://www.nvidia.com/en-us/data-center/tensor-cores/)) are specialized for general matrix multiplications (GEMM).
 
 ---
 ## Partitions
@@ -112,13 +112,13 @@ Let's assume a [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue)
 - First-come, first-served queue (so no priority, fair share, or partitions)
 
 On average, the time from submission to job completion is:
-$$$$
+$$
 \frac{1}{\mu - \lambda}
-$$$$
+$$. 
 The utilization is $$\rho = \lambda/\mu$$, if $$\rho > 1$$ the queue will grow unbounded. Otherwise, it's expected length is:
-$$$$ \frac{\rho}{1-\rho}$$$$
+$$ \frac{\rho}{1-\rho}$$
 With a variance of:
-$$$$\frac{\rho}{(1-\rho)^2}$$$$
+$$\frac{\rho}{(1-\rho)^2}$$
 
 ---
 
