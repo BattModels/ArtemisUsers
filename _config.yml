@@ -1,6 +1,6 @@
 title: Artemis
-domain: arjunacluster.github.io
-url: https://arjunacluster.github.io
+domain: eeg.engin.umich.edu
+url: https://eeg.engin.umich.edu
 baseurl: /ArtemisUsers/
 
 remote_theme: pmarsceill/just-the-docs
