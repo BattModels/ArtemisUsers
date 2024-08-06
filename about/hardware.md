@@ -88,10 +88,10 @@ Priority is how jobs are sorted in the queue, jobs with a higher priority run fi
 
 ```
 Job_priority =
-	(10000) * min(Time In Queue / 28 Days, 1) +
-	(10000) * (fair-share_factor) +
-	(1000000) * (0 or 100 if venkvis-debug) +
-	... # Other stuff (Assoc Factor)
+    (10000) * min(Time In Queue / 28 Days, 1) +
+    (10000) * (fair-share_factor) +
+    (1000000) * (0 or 100 if venkvis-debug) +
+    ... # Other stuff (Assoc Factor)
 ```
 
 The `fair-share_factor` is (roughly) $$U_{total} / (N U_{you})$$, where $N$ is the size of the group, $$U_{total}$$ is the total usage of the group and $$U_{you}$$ is your usage.
@@ -104,7 +104,7 @@ The `fair-share_factor` is (roughly) $$U_{total} / (N U_{you})$$, where $N$ is t
 
 ---
 ## Why not a longer Max Wall Time?
-> tl;dr: To keep the queue short. Use [checkpointing](checkpoint.md) for longer runs.
+> tl;dr: To keep the queue short. Use [checkpointing]({% link about/checkpoint.md %}) for longer runs.
 
 Let's assume a [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue)
 - Jobs arrive every $$\lambda$$ time units (Poisson Process)
@@ -146,7 +146,7 @@ The expected wait for a one-off job is ~1/2 the max wall time divided by the num
 
 - Node Local: Scratch files, temporary checkpoints
 - Turbo/ Home: Software, Environments, Code
-- scratch: Large Datasets *actively* being used, multi-node checkpoints
+- scratch: Large Datasets *actively* being used, multi-node checkpoints.
 - DataDen: Large Datasets not *actively* being used
 
 > Please manage your storage responsibly and clean up after yourself
@@ -169,4 +169,3 @@ trap 'rm -rf -- "$TMPDIR"' EXIT
 # ... do job stuff
 
 ```
-

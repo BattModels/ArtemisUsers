@@ -9,7 +9,7 @@ nav_order: 6
 
 Jupyter Notebooks offer a convenient way to interactively work on something,
 but can be a heavy computational workload and are
-[prohibited from running on the head node](../about/accounts.md#acceptable-use-policy).
+[prohibited from running on the head node](https://arc.umich.edu/lighthouse/user-guide/).
 You must run notebooks on the worker nodes, as described, in this tutorial.
 
 > Notebooks run on the headnode may be terminated without warning
@@ -30,10 +30,10 @@ srun -N 1 -n 1 -p <partition> --mem=2G -t 01:00:00 --pty bash
 srun -N 1 -n 1 -p venkvis-h100 --gres=gpu:h100:1 --mem=2G -t 01:00:00 --pty bash
 ```
 Replace `<account>` and `<partition>` with the appropriate account and
-[partition](../about/hardware#partitions).
+[partition]({% link about/hardware.md %}#partitions).
 
 > Interactive sessions do count against your
-> [fairshare](../getting_started/slurm_intro.md#accounting). Generally 2 cores
+> [fairshare]({% link getting_started/slurm_intro.md %}#accounting). Generally 2 cores
 > is sufficient for non-parallelized codes.
 > __Jupyter can only run on a single machine__. Be sure to specify `-N 1`
 

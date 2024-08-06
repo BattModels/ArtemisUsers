@@ -18,7 +18,7 @@ You can install this with spack or just:
 ```shell
 # Download the AppImage from GitHub (update release as needed)
 wget https://github.com/Syllo/nvtop/releases/download/3.1.0/nvtop-x86_64.AppImage
-# Mark it as executable 
+# Mark it as executable
 chmod u+x nvtop-x86_64.AppImage
 
 # Profit (ssh to your job's node first)

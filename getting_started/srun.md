@@ -6,9 +6,8 @@ nav_order: 7
 ---
 
 # Submitting Interactive Jobs with `srun`
-`srun` is a command-line tool used for submitting jobs to the Slurm workload manager, offering a wide range of options for customizing job submission, and essentially letting you run parallel jobs on a cluster managed by Slurm.
+`srun` is a command-line tool used for submitting jobs to the [Slurm workload manager]({% link getting_started/slurm_intro.md %}), offering a wide range of options for customizing job submission, and essentially letting you run parallel jobs on a cluster managed by Slurm.
 
-You can find more information about Slurm [here](slurm_intro.md)
 
 ### `srun` examples
 
@@ -18,15 +17,12 @@ The basic syntax for using `srun` is as follows:
 srun [options] command
 ```
 
-where `command` is the command or script to be executed. 
+where `command` is the command or script to be executed.
 
-> When using `srun` at Artemis, you may get ```srun: error: spank: x11.so: Plugin file not found```.
-> You may disregard this error message
-
-To start an interactive job requesting one node, 2GB of memory, for 30 minutes, on the `venkvis-cpu` partition, type:
+To start an interactive job requesting one node, 2GB of memory, for 30 minutes, on the `venkvis-debug` partition, type:
 
 ```
-srun --partition=venkvis-cpu --nodes=1 --mem=2G --time=30 --pty bash
+srun --partition=venkvis-debug --nodes=1 --mem=2G --time=30 --pty bash
 ```
 
 > The option `--pty` here is required to start an interactive job.

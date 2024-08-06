@@ -52,7 +52,7 @@ Collectively, these tasks form a single *Job* that requires a certain amount of 
 
 > We could also split these tasks across several jobs, or use a [Heterogeneous Job](https://slurm.schedmd.com/heterogeneous_jobs.html), to tailor our requests for each job step.
 
-The user submits this *job* to a particular *partition* to satisfy the job's computing needs. This job requires a GPU, and it needs a partition with GPUs (i.e., `venkvis-h100`). Other jobs may need lots of memory or a longer run time and should be submitted accordingly. For more information about Artemis's partitions see [Cluster Architecture]({{site.baseurl}}{% link about/hardware.md %}).
+The user submits this *job* to a particular *partition* to satisfy the job's computing needs. This job requires a GPU, and it needs a partition with GPUs (i.e., `venkvis-h100`). Other jobs may need lots of memory or a longer run time and should be submitted accordingly. For more information about Artemis's partitions see [Cluster Architecture]({% link about/hardware.md %}).
 
 Once submitted to a *partition*, the *Job* waits in the Slurm queue until Slurm releases it to run on one or more *nodes*. Slurm releases jobs based on their priority computed from the user's [fair share](https://slurm.schedmd.com/fair_tree.html).  Users using less than their "fair share" have a higher priority than users using more than their "fair share."
 
@@ -81,4 +81,4 @@ Here we can see that `jdoe` has `venkvis0` and `venkvis` as their default accoun
 
 ## Additional Resources
 
-See the [High-Performance Computing]({{site.baseurl}}{% link getting_started/linux.md %}#high-performance-computing) section for more information.
+See the [High-Performance Computing]({% link getting_started/linux.md %}#high-performance-computing) section for more information.
