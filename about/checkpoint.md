@@ -5,14 +5,14 @@ parent: About Artemis
 nav_order: 4
 ---
 
-# Checkpointing and Requeing Jobs 
+# Checkpointing and Requeing Jobs
 Have a really long job that you want to run? Here's how you do it:
 1. Submit the job to the queue
 2. Run for almost  the full max wall time
 3. Send a kill signal to your code using [`timeout`](https://manpages.org/timeout)
 4. Your code saves a checkpoint
 5. Requeue the job with [scontrol](https://slurm.schedmd.com/scontrol.html)
-6. Repeat 2-5 until your job finishes 
+6. Repeat 2-5 until your job finishes
 
 ```bash
 #!/bin/bash
@@ -29,7 +29,7 @@ timeout 47.5h awesome_script ...
 time awesome_script
 
 # Requeue if your code timed out
-if [[ $? == 124 ]]; then 
+if [[ $? == 124 ]]; then
     scontrol requeue $SLURM_JOB_ID
 fi
 ```
@@ -50,7 +50,7 @@ fi
 ```
 
 > Typically, a non-zero exit code in Linux means "something went wrong".  Because we don't want to requeue a job that failed indefinetly, we need to be able to distighish between "Something went wrong" and "I need more time".
-> 
+>
 > Here we're checking if the exit code is 124 (`timeout` uses 124 to indicate the command timed out), but any non-zero exit code could work. Check your code's docs to see what's normal, what's an error, and how to throw a different signal
 
 

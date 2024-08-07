@@ -1,6 +1,6 @@
 name: Tech Support
 description: Get support for an issue on Arjuna
-labels: 
+labels:
   - tech-support
   - notify
 

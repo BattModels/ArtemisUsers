@@ -7,7 +7,7 @@ nav_order: 4
 
 # Data Backup
 
-While data storage on Artemis is [configured](../about/hardware.md#storage) to provide robustness against
+While data storage on Artemis is [configured]({% link about/hardware.md %}#storage) to provide robustness against
 disk failure, [disaster can strike](https://lists.andrew.cmu.edu/mailman/private/arjuna-users/2021-September/000050.html).
 Users are responsible for **backing up their data regularly**, _especially_
 things that take a lot of (human or computer) time to reproduce!
@@ -38,7 +38,7 @@ Notice when copying folders, the destination folder is `/path/to` not `/path/to/
 `scp` will copy the folder to `/path/to` thus creating `/path/to/folder`; using a destination of `/path/to/folder` would result in `/path/to/folder/folder`.
 
 These commands can be shortened to `scp artemis:/path/to/file /path/to/dst` by
-setting up an [SSH config file](../getting_started/connecting.md#using-a-ssh-config-file).
+setting up an [SSH config file]({% link getting_started/connecting.md %}#using-a-ssh-config-file).
 To read the manual page for `scp`, type `man scp` into a terminal.
 
 ## Managing Code
@@ -51,7 +51,7 @@ git clone git@github.com:ArtemisCluster/ArtemisUsers.git
 
 See GitHub's documentation for connecting to [GitHub via ssh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) for more information.
 
-Additional resources for git and GitHub can be found on our [Other Resources](./linux.md#git) page.
+Additional resources for git and GitHub can be found on our [Other Resources]({% link getting_started/linux.md %}#git) page.
 
 [git]: https://git-scm.com
 [GitHub]: https://github.com
@@ -115,7 +115,7 @@ After completing [steps 1 - 3 above](#configuring-rclone-remotes): you will be p
 4. For "Use auto config?" enter `n` if configuring rclone on Artemis (Or another headless machine). Otherwise, enter `y`
 5. Open the link in a browser (If you entered `y` above a browser window should open).
     - Choose the Google account to which you want to back up (i.e. your Andrew Account, must be a test user).
-    - If you get an error that "Google hasn't verified this app", make sure that you've set the app status as "Testing" on the Google API Console and that you've added your google account as a test user. 
+    - If you get an error that "Google hasn't verified this app", make sure that you've set the app status as "Testing" on the Google API Console and that you've added your google account as a test user.
 
 6. After authenticating, copy the code and paste it into the rclone prompt.
 7. The remaining defaults should be fine.

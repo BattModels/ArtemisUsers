@@ -120,4 +120,3 @@ Host artemis
 
 For more configuration options see `man ssh_config` or
 [ssh_config's documentation](https://man.openbsd.org/ssh_config).
-

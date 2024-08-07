@@ -60,6 +60,6 @@ Provided by ARC [OnDemand](https://arc.umich.edu/open-ondemand/) let's you inter
 - Launch a Jupyter Notebook (Even one with a GPU)
 - Launch a Virtual Remote Desktop (You can even connect to it with a native app)
 
-To start visit: [lighthouse.arc-ts.umich.edu](http://lighthouse.arc-ts.umich.edu/)
+To start visit: [lighthouse.arc-ts.umich.edu](https://lighthouse.arc-ts.umich.edu/)
 
 > You're still billed for the resources you use, it's just a different way of accessing them

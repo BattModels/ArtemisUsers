@@ -6,8 +6,8 @@ nav_order: 1
 
 # Welcome!
 
-Artemis is a multi-departmental CPU and GPU computing cluster. Here you can find
-documentation about what Artemis is and how to use it.
+Artemis is the EEG's group CPU and GPU computing cluster within [UM ARC's Lighthouse](https://arc.umich.edu/lighthouse/) cluster.
+Here you can find documentation about what Artemis is and how to use it.
 
 ## User Accounts
 
@@ -20,16 +20,17 @@ Fill out the [form](https://arc.umich.edu/login-request/) to apply for a user ac
 
 ## Support
 
-If you encounter an issue using Artemis, please refer to the followig resources:
+If you encounter an issue using Artemis, please refer to the following resources:
 
 ### Where to ask questions
 
 - [UM CoderSpaces Slack](https://umich.enterprise.slack.com/archives/C02T1M5QNH3) ([join](https://documentation.its.umich.edu/node/352#JoinResign))
-- Cross-post in #bridges, #arjuna-cluster in slack
+- EEG's [#artemis-cluster](https://umich.enterprise.slack.com/archives/C070HCDCY9F) Slack Channel
 
 ### Documentation
 
 - [UM Lighthouse User Guide](https://arc.umich.edu/lighthouse/user-guide/)
+- [UM Lighthouse Support Page](https://its.umich.edu/advanced-research-computing/high-performance-computing/lighthouse/support)
 - [UM Great Lakes User Guide](https://arc.umich.edu/greatlakes/user-guide/)
 - [UM Cheat Sheet](https://arc.umich.edu/wp-content/uploads/sites/4/2020/05/Great-Lakes-Cheat-Sheet.pdf)
 - [Slurm](https://slurm.schedmd.com/documentation.html)
@@ -46,14 +47,6 @@ All publications resulting from the usage of Artemis should include an acknowled
 We recommend the following text:
 
 > This research was supported in part through computational resources and services provided by Advanced Research Computing at the University of Michigan, Ann Arbor.
-
-## Maintenance
-
-Artemis will be taken offline for periodic updates, maintenance, and upgrades. Users will be notified for the maintenance information [here](https://arc.umich.edu/tag/maintenance/) or via [email](arc-support@umich.edu). 
-
-We intend to keep Artemis up for as much time as possible. However, planned
-periodic downtime for maintenance will likely improve total uptime and user
-experience by catching and fixing issues before they become disruptive.
 
 ## Contributing
 

@@ -75,7 +75,7 @@ The Debug partition is explicitly designed to get you on a node *fast* for *debu
 
 - Use `--gres` to target particular GPUs (i.e. `--gres=gpu:h100:1` to get 1 H100 GPU or any gpu `--gres=gpu:1`)
     - Being flexible let's slurm schedule you sooner
-    - 
+    -
 - You can end up on any node that meets your requirements
     - CPU-only jobs will get routed to GPU nodes if all the CPU nodes are taken
     - You still only pay the debug rate and you only get what you asked for
@@ -88,13 +88,13 @@ Priority is how jobs are sorted in the queue, jobs with a higher priority run fi
 
 ```
 Job_priority =
-	(10000) * min(Time In Queue / 28 Days, 1) + 
-	(10000) * (fair-share_factor) +
-	(1000000) * (0 or 100 if venkvis-debug) +
-	... # Other stuff (Assoc Factor)
+    (10000) * min(Time In Queue / 28 Days, 1) +
+    (10000) * (fair-share_factor) +
+    (1000000) * (0 or 100 if venkvis-debug) +
+    ... # Other stuff (Assoc Factor)
 ```
 
-The `fair-share_factor` is (roughly) $$U_{total} / (N U_{you})$$, where $N$ is the size of the group, $$U_{total}$$ is the total usage of the group and $$U_{you}$$ is your usage. 
+The `fair-share_factor` is (roughly) $$U_{total} / (N U_{you})$$, where $N$ is the size of the group, $$U_{total}$$ is the total usage of the group and $$U_{you}$$ is your usage.
 - You can get a report with `sshare -lU` with `LevelFS` being your `fair-share_factor`
 - It's greater than 1 for under-served users
 - Between 0 and 1 for over-served users
@@ -104,7 +104,7 @@ The `fair-share_factor` is (roughly) $$U_{total} / (N U_{you})$$, where $N$ is t
 
 ---
 ## Why not a longer Max Wall Time?
-> tl;dr: To keep the queue short. Use checkpointing for longer runs. [Details below](checkpoint.md)
+> tl;dr: To keep the queue short. Use [checkpointing]({% link about/checkpoint.md %}) for longer runs.
 
 Let's assume a [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue)
 - Jobs arrive every $$\lambda$$ time units (Poisson Process)
@@ -114,7 +114,7 @@ Let's assume a [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue)
 On average, the time from submission to job completion is:
 $$
 \frac{1}{\mu - \lambda}
-$$. 
+$$.
 The utilization is $$\rho = \lambda/\mu$$, if $$\rho > 1$$ the queue will grow unbounded. Otherwise, it's expected length is:
 $$ \frac{\rho}{1-\rho}$$
 With a variance of:
@@ -146,7 +146,7 @@ The expected wait for a one-off job is ~1/2 the max wall time divided by the num
 
 - Node Local: Scratch files, temporary checkpoints
 - Turbo/ Home: Software, Environments, Code
-- scratch: Large Datasets *actively* being used, multi-node checkpoints
+- scratch: Large Datasets *actively* being used, multi-node checkpoints.
 - DataDen: Large Datasets not *actively* being used
 
 > Please manage your storage responsibly and clean up after yourself
@@ -169,4 +169,3 @@ trap 'rm -rf -- "$TMPDIR"' EXIT
 # ... do job stuff
 
 ```
-

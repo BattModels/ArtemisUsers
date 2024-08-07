@@ -3,7 +3,7 @@ domain: eeg.engin.umich.edu
 url: https://eeg.engin.umich.edu
 baseurl: /ArtemisUsers/
 
-remote_theme: pmarsceill/just-the-docs
+theme: just-the-docs
 
 color_scheme: "light"
 search_enabled: true

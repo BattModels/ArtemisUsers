@@ -1,6 +1,6 @@
 {%- comment -%}
   MathJax: See https://docs.mathjax.org/en/v2.7-latest/start.html
-  
+
   For loading and configuration to use version 3, see:
   https://docs.mathjax.org/en/latest/web/configuration.html
 {%- endcomment -%}
@@ -8,7 +8,7 @@
 {% case page.math %}
 
   {% when "katex" %}
-  
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13/dist/katex.min.css" crossorigin="anonymous">
 
     <!-- The loading of KaTeX is deferred to speed up page rendering -->
@@ -28,8 +28,8 @@
 
     <!-- Override the KaTeX default of font-size: 1.21em -->
     <style>
-      .katex { 
-        font-size: 1em; 
+      .katex {
+        font-size: 1em;
       }
     </style>
 
@@ -39,25 +39,25 @@
         pointer-events: none;
     }
     </style>
-     
+
   {% when "mathjax2" %}
-  
+
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
-        TeX: { 
+        TeX: {
           equationNumbers: { autoNumber: "AMS" }
         }
       });
     </script>
-    <script type="text/javascript" async 
+    <script type="text/javascript" async
       src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS_SVG">
     </script>
-  
+
   {% when "mathjax3" %}
-    
+
     <script>
-      MathJax = { 
-        tex: { 
+      MathJax = {
+        tex: {
           tags: 'ams',
           packages: {'[+]': ['textmacros']},
         },
