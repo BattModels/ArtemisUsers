@@ -62,7 +62,7 @@ to getting started with HPC.
 
 [PSC's Getting Started with HPC]: https://www.psc.edu/resources/bridges-2/getting-started-with-hpc/
 
-[HPC User Guide (SURF)]: https://servicedesk.surf.nl/wiki/display/WIKI/HPC+User+Guide
+[HPC User Guide (SURF)]: https://servicedesk.surf.nl/wiki/display/WIKI/Example+job+scripts
 
 **[SLURM](https://slurm.schedmd.com/):** SLURM's Documentations
 
