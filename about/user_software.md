@@ -147,3 +147,53 @@ packages:
       scalapack: [amdsclapack, netlib-scalapack]
 
 ```
+
+## Julia
+
+## Minimizing Redundant Precompilation
+
+As Artemis is a [heterogeneous cluster](./hardware.md#cluster-architecture), switching between different partitions can trigger frequent precompilation, as Julia attempts to recompile for the current microarchitecture. To avoid this set [`JULIA_CPU_TARGET`](https://docs.julialang.org/en/v1/manual/environment-variables/#JULIA_CPU_TARGET) to an appropriate setting.
+
+For example, within your `~/.bashrc` or equivalent, put:
+
+```shell
+export JULIA_CPU_TARGET="generic;znver4,clone_all;znver3,clone_all;haswell"
+```
+
+This will instruct Julia to compile for Zen4 (Most Worker Nodes), Zen3 (A100 Nodes) and haswell (Head node), with a generic CPU target as a fallback. This will increase the size of `~/.julia/compiled` as 3 sets of system and package images will now need to be stored. For more information see the [Julia docs](https://docs.julialang.org/en/v1/manual/environment-variables/#JULIA_CPU_TARGET).
+
+
+### Example Precompile Job Script
+```shell
+#!/bin/bash
+#SBATCH -p venkvis-cpu
+#SBATCH --cpus-per-task 4
+#SBATCH --mem-per-cpu 1800M
+#SBATCH --time=0:20:00
+set -x
+my_job_header
+
+# Configure Julia
+export JULIA_CPU_TARGET="generic;znver4,clone_all;znver3,clone_all;haswell"
+export JULIA_PKG_PRECOMPILE_AUTO=0                        # Disable automatic precompilation so we control when it happens (Mainly for MPI)
+export JULIA_NUM_PRECOMPILE_TASKS=$SLURM_CPUS_ON_NODE     # Limit precompilation tasks to the number of CPUs
+
+# Uncomment if using MPI.jl
+# module --ignore_cache load openmpi/4.1.6
+# julia --color=no --startup-file=no --project -e 'using MPIPreferences; MPIPreferences.use_system_binary()'
+
+# Precompile the Project
+julia --color=no --startup-file=no --project -e 'using Pkg; Pkg.resolve(); Pkg.instantiate(); Pkg.precompile(timing=true)'
+```
+
+The job script would then look like:
+
+```shell
+# [Job Header Goes Here]
+
+export JULIA_CPU_TARGET="generic;znver4,clone_all;znver3,clone_all;haswell"
+
+julia --startup-file=no --project ...
+```
+
+> Note: `--startup-file=no` is needed to avoid loading packages from your base environment (i.e. Revise) and

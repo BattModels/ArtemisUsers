@@ -13,3 +13,6 @@ ga_tracking: G-X2LPWRLJ7X
 includes:
   head:
     - head_custom.html
+
+plugins:
+  - jekyll-relative-links

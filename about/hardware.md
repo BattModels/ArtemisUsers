@@ -26,10 +26,10 @@ math: mathjax2
 | Largemem |  3  | AMD 9654 |             | 768 GB | 1.9TB     | 13,989  |
 | CPU      | 25  | AMD 9654 |             | 368 GB | 1.9TB     | 12,998  |
 
-| CPU                                                                    | Cores | Threads | Base   | Boost              | L3 Cache |
-| ---------------------------------------------------------------------- | ----- | ------- | ------ | ------------------ | -------- |
-| [AMD Epyc 9654 CPU](https://www.amd.com/en/products/cpu/amd-epyc-9654) | 96    | 192     | 2.6GHz | 3.55GHz (All Core) | 384MB    |
-| [AMD Epyc 7513 CPU](https://www.amd.com/en/products/cpu/amd-epyc-7513) | 32    | 64      | 2.6GHz | 3.65GHz (Max)      | 128MB    |
+| CPU                                                                                                                                | μArch | Cores | Threads | Base   | Boost              | L3 Cache |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ----- | ----- | ------- | ------ | ------------------ | -------- |
+| [AMD Epyc 9654 CPU](https://www.amd.com/en/products/processors/server/epyc/4th-generation-9004-and-8004-series/amd-epyc-9654.html) | Zen4  | 96    | 192     | 2.6GHz | 3.55GHz (All Core) | 384MB    |
+| [AMD Epyc 7513 CPU](https://www.amd.com/en/products/processors/server/epyc/7003-series/amd-epyc-7513.html)                         | Zen3  | 32    | 64      | 2.6GHz | 3.65GHz (Max)      | 128MB    |
 
 > Nodes are partitioned by *threads*, not *cores*. Picking 1 or a multiple of 2 is advisable; see [sbatch's](https://slurm.schedmd.com/sbatch.html) `--distribution` flag
 
