@@ -85,9 +85,15 @@ packages:
     - spec: cuda@12.1.1
       modules:
       - cuda/12.1.1
+    - spec: cuda@12.6.3
+      modules:
+      - cuda/12.6.3
+    - spec: cuda@12.8.1
+      modules:
+      - cuda/12.8.1
 
   # Versions of cuDNN provided by ARCH
-  # Again, could install but a) space and b) get the actual files is tricky (install is easy)
+  # Again, could install but a) space and b) getting the actual files is tricky (install is easy)
   # Note: This should be updated as new versions of cuDNN are installed
   cudnn:
     buildable: False
@@ -116,12 +122,18 @@ packages:
     - spec: cudnn@8.9.0-12.1
       modules:
       - cudnn/12.1-v8.9.0
+    - spec: cudnn@9.6.0-12.6
+      modules:
+      - cudnn/12.6-v9.6.0
+    - spec: cudnn@9.10.0-12.8
+      modules:
+      - cudnn/12.8-v9.10.0
 
   # The following applies for all packages
   all:
     # Check cuda_arch specification
     require:
-    - one_of: ["cuda_arc=80,90", cuda_arch=80, cuda_arch=90]
+    - one_of: ["cuda_arch=80,90", cuda_arch=80, cuda_arch=90]
       when: +cuda
       message: cuda_arch should be 80 (A100) or 90 (H100)
 
@@ -130,7 +142,7 @@ packages:
     - +cuda             # Enable cuda support when possible
 
     # Artemis Worker Nodes are Zen4, keep x86_64 as a fallback
-    target: [zen4, x84_64]
+    target: [zen4, x86_64]
 
     # Sets preference for compilers
     compiler:
