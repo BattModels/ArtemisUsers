@@ -12,7 +12,7 @@ math: mathjax2
 - Bigger Nodes: Higher Core counts, More Memory, TBs of NVMe scratch
 - Faster GPUs: Between 2.5x and 36x faster
 - More Storage: Up to 100TB of Archival Storage
-- No pre-built modules will need to use [spack](https://spack.io )
+- No pre-built modules will need to use [Spack](https://spack.io)
 - 4 Tier Storage System: Node, Scratch, Turbo, and DataDen
 - Short queues, limited wall times
 
