@@ -10,9 +10,9 @@ nav_order: 5
 ## Getting Help
 - The [Artemis slack channel](https://eeg-group.slack.com/archives/C070HCDCY9F)
 - [UM CoderSpaces Slack](https://umich.enterprise.slack.com/archives/C02T1M5QNH3) ([join](https://documentation.its.umich.edu/node/352#JoinResign))
--  [UM Lighthouse User Guide](https://arc.umich.edu/lighthouse/user-guide/)
-- [UM Great Lakes User Guide](https://arc.umich.edu/greatlakes/user-guide/)
-- [UM Cheat Sheet](https://arc.umich.edu/wp-content/uploads/sites/4/2020/05/Great-Lakes-Cheat-Sheet.pdf)
+-  [UM Lighthouse User Guide](https://documentation.its.umich.edu/arc-hpc/lighthouse/user-guide)
+- [UM Great Lakes User Guide](https://documentation.its.umich.edu/arc-hpc/greatlakes/user-guide)
+- [UM Great Lakes Cheat Sheet](https://docs.google.com/document/d/1wsr3yzkkojUMBCCneCz-l413xBzU-SZFAqcFrAAjttk/edit?usp=sharing)
 
 ## Tmux
 Lighthouse and GreatLakes use multiple login nodes for load balancing/redundancy. To persist a session across login nodes, change where tmux creates its sockets:
@@ -40,7 +40,7 @@ If you're moving data between clusters, use [Globus](https://www.globus.org):
 - It's way faster than scp/rclone/rsync
 - On Arjuna use [Globus Connect Personal](https://www.globus.org/globus-connect-personal)
 
-[UM ARC Endpoints](https://arc.umich.edu/globus/#document-4) (don't go using some rando endpoint)
+[UM ARC Endpoints](https://coerc.engin.umich.edu/globus/) (don't go using some random endpoint)
 - [DataDen](https://app.globus.org/file-manager?origin_id=ab65757f-00f5-4e5b-aa21-133187732a01)
 - [Turbo](https://app.globus.org/file-manager?origin_id=8c185a84-5c61-4bbc-b12b-11430e20010f&origin_path=%2F)
 - [/home on Lighthouse](https://app.globus.org/file-manager?origin_id=3242c149-a2b9-4dba-9406-ae3717981621)
