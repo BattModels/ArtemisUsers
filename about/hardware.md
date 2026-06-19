@@ -61,21 +61,12 @@ To use these nodes, submit your job with the `venkvis-short` QOS.
 
 | Partition        |   Nodes   | Max Wall Time | Priority  | Max Nodes |
 | ---------------- | :-------: | :-----------: | :------:  | :-------: |
-| venkvis-cpu      |    CPU    |     2hrs     |    Reserved Nodes |      2     |
+| venkvis-cpu      |    CPU    |     2hrs     |    1 |      2     |
 
 #### Usage
-In an `sbatch` script:
-```
-#SBATCH --qos=venkvis-short
-```
-In an interactive `srun`:
-```
-srun --qos=venkvis-short ...
-```
-In Open OnDemand: 
-
-Select `venkvis-short` from the QOS dropdown menu.
-
+- In an `sbatch` script: `#SBATCH --qos=venkvis-short`
+- In an interactive `srun`: `srun --qos=venkvis-short ...`
+- In Open OnDemand: Select `venkvis-short` from the QOS dropdown menu.
 ___
 ## A Note on Fairshare
 
