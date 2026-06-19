@@ -73,9 +73,9 @@ packages:
     - spec: cuda@11.5.1
       modules:
       - cuda/11.5.1
-    - spec: cuda@11.6.3
+    - spec: cuda@11.6.2
       modules:
-      - cuda/11.6.3
+      - cuda/11.6.2
     - spec: cuda@11.7.1
       modules:
       - cuda/11.7.1
@@ -91,6 +91,16 @@ packages:
     - spec: cuda@12.8.1
       modules:
       - cuda/12.8.1
+    - spec: cuda@12.8.2
+      modules:
+      - cuda/12.8.2
+    - spec: cuda@13.1.0
+      modules:
+      - cuda/13.1.0
+    - spec: cuda@13.2.1
+      modules:
+      - cuda/13.2.1
+
 
   # Versions of cuDNN provided by ARC
   # Again, could install but a) space and b) getting the actual files is tricky (install is easy)
@@ -128,6 +138,15 @@ packages:
     - spec: cudnn@9.10.0-12.8
       modules:
       - cudnn/12.8-v9.10.0
+    - spec: cudnn@9.10.2-12.8
+      modules:
+      - cudnn/12.8-v9.10.2
+    - spec: cudnn@9.21.1-13.1
+      modules:
+      - cudnn/13.1-v9.21.1
+    - spec: cudnn@9.22.1-13.2
+      modules:
+      - cudnn/13.2-v9.22.1
 
   # The following applies for all packages
   all:
