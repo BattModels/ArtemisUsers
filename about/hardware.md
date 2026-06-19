@@ -67,7 +67,8 @@ To use these nodes, submit your job with the `venkvis-short` QOS.
 - In an `sbatch` script: `#SBATCH --qos=venkvis-short`
 - In an interactive `srun`: `srun --qos=venkvis-short ...`
 - In Open OnDemand: Select `venkvis-short` from the QOS dropdown menu.
-___
+
+---
 ## A Note on Fairshare
 
 Nodes are priced proportionate to their cost and the fraction that you use.
