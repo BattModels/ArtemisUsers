@@ -73,7 +73,7 @@ packages:
     - spec: cuda@11.5.1
       modules:
       - cuda/11.5.1
-    - spec: cuda@11.6.2
+    - spec: cuda@11.6.3
       modules:
       - cuda/11.6.3
     - spec: cuda@11.7.1
