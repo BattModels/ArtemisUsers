@@ -54,6 +54,27 @@ math: mathjax2
 - Usage is proportionate to the cost of the nodes you use
 - Usage (currently) does not reset; thus, your fair share priority *will not recover*
 - The *Max Jobs* limit is enforced using [MaxSubmitJobsPerUser](https://slurm.schedmd.com/resource_limits.html#qos_maxsubmitjobspu)
+ 
+### `venkvis-short` QOS
+Two nodes from `venkvis-cpu` are reserved for shorter jobs. 
+To use these nodes, submit your job with the `venkvis-short` QOS.
+
+| Partition        |   Nodes   | Max Wall Time | Priority  | Max Nodes |
+| ---------------- | :-------: | :-----------: | :------:  | :-------: |
+| venkvis-cpu      |    CPU    |     2hrs     |    Reserved Nodes |      2     |
+
+#### Usage
+In an `sbatch` script:
+```
+#SBATCH --qos=venkvis-short
+```
+In an interactive `srun`:
+```
+srun --qos=venkvis-short ...
+```
+In Open OnDemand: 
+
+Select `venkvis-short` from the QOS dropdown menu.
 
 ___
 ## A Note on Fairshare
