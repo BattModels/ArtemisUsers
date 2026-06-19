@@ -49,7 +49,7 @@ math: mathjax2
 | venkvis-largemem | Large Mem |     48hrs     |          |          |           |
 | venkvis-a100     |   A100    |     8hrs      |          |          |           |
 | venkvis-h100     |   H100    |     8hrs      |          |          |           |
-| debug            |    all    |  30 minutes   |   100    |    1     |     4     |
+| venkvis-debug            |    all    |  30 minutes   |   100    |    1     |     4     |
 
 - Usage is proportionate to the cost of the nodes you use
 - Usage (currently) does not reset; thus, your fair share priority *will not recover*
@@ -95,8 +95,7 @@ Using the most appropriate resource for the job is the *best way* to spend less 
 The Debug partition is explicitly designed to get you on a node *fast* for *debugging* or development. It's priced at the average cost per CPU/GPU/Memory unit
 
 - Use `--gres` to target particular GPUs (i.e. `--gres=gpu:h100:1` to get 1 H100 GPU or any gpu `--gres=gpu:1`)
-    - Being flexible let's slurm schedule you sooner
-    -
+    - Being flexible lets slurm schedule you sooner
 - You can end up on any node that meets your requirements
     - CPU-only jobs will get routed to GPU nodes if all the CPU nodes are taken
     - You still only pay the debug rate and you only get what you asked for
@@ -151,9 +150,9 @@ Plot of the queue length (red), it's variance (blue) and $$+3\sigma$$ band (gree
 - The *variance* in queue length (blue) increases even faster
 
 The expected wait for a one-off job is ~1/2 the max wall time divided by the number of nodes
-- ~0:40 for a H100 gpu
-- 1 hr for an A100 gpu
-- ~2hrs for an *entire* CPU node
+- ~1.33hrs for a H100 gpu
+- ~2hrs for an A100 gpu
+- ~1hrs for an *entire* CPU node
 
 # Storage
 
