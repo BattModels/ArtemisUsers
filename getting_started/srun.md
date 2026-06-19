@@ -28,10 +28,10 @@ srun --partition=venkvis-debug --nodes=1 --mem=2G --time=30 --pty bash
 > The option `--pty` here is required to start an interactive job.
 
 If you want, you can get a notification by email when the interactive environment is ready.
-If your email address is <uniquename>@umich.edu, to start an interactive job requesting one node, 1 task, 1GB of memory, for 2 minutes, on the `venkvis-cpu` partition, type:
+If your email address is <uniqname>@umich.edu, to start an interactive job requesting one node, 1 task, 1GB of memory, for 2 minutes, on the `venkvis-cpu` partition, type:
 
 ```
-srun --partition=venkvis-cpu --ntasks=1 --nodes=1 --mem=1G --time=2 --mail-type=BEGIN --mail-user=uniquename@umich.edu --pty bash
+srun --partition=venkvis-cpu --ntasks=1 --nodes=1 --mem=1G --time=2 --mail-type=BEGIN --mail-user=uniqname@umich.edu --pty bash
 ```
 
 You can also submit a job using `srun`.

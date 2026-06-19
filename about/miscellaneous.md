@@ -56,7 +56,7 @@ If you're moving data between clusters, use [Globus](https://www.globus.org):
     - Can module load it on GreatLakes or Artemis `module load archivetar`
 
 ## OnDemand
-Provided by ARC [OnDemand](https://arc.umich.edu/open-ondemand/) let's you interact with Artemis (Or Great Lakes) via a web browser to:
+Provided by ARC [OnDemand](https://arc.umich.edu/open-ondemand/) lets you interact with Artemis (Or Great Lakes) via a web browser to:
 - Launch a Jupyter Notebook (Even one with a GPU)
 - Launch a Virtual Remote Desktop (You can even connect to it with a native app)
 

@@ -92,7 +92,7 @@ packages:
       modules:
       - cuda/12.8.1
 
-  # Versions of cuDNN provided by ARCH
+  # Versions of cuDNN provided by ARC
   # Again, could install but a) space and b) getting the actual files is tricky (install is easy)
   # Note: This should be updated as new versions of cuDNN are installed
   cudnn:
@@ -208,4 +208,4 @@ export JULIA_CPU_TARGET="generic;znver4,clone_all;znver3,clone_all;haswell"
 julia --startup-file=no --project ...
 ```
 
-> Note: `--startup-file=no` is needed to avoid loading packages from your base environment (i.e. Revise) and
+> Note: `--startup-file=no` is needed to avoid loading packages from your base environment (i.e. Revise).

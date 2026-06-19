@@ -132,10 +132,10 @@ After completing [steps 1 - 3 above](#configuring-rclone-remotes): you will be p
 To [sync](https://rclone.org/commands/rclone_sync/) a folder to a remote destination, use the `rclone sync` command:
 
 ```bash
-# Local (Or from a teminal on Artemis) to Remote
+# Local (Or from a terminal on Artemis) to Remote
 rclone sync -P path/to/folder remote:path/to/folder
 
-# Remote to Local (Or from a teminal on Artemis)
+# Remote to Local (Or from a terminal on Artemis)
 rclone sync -P remote:path/to/folder path/to/folder
 ```
 
@@ -221,7 +221,7 @@ rclone sync ~ remote:artemis_backup/current \
 
 This will sync most files in your home directory (`~`) to
 `remote:artemis_backup/current` and copy historical snapshots to `remote:artemis_backup/snapshot-YYYY-MM-DD`
-using [`--backup-dir](https://rclone.org/docs/#backup-dir-dir).
+using [`--backup-dir`](https://rclone.org/docs/#backup-dir-dir).
 To sync other files, add or remove filters as needed.
 See [rclone filtering](https://rclone.org/filtering/) for more information on
 filters and how to use them.
