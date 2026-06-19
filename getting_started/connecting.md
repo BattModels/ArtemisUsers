@@ -88,7 +88,7 @@ instead of having to type out the full `ssh uniqname@lighthouse.arc-ts.umich.edu
 
 ``` conf
 Host artemis
-    User uniquename
+    User uniqname
     HostName lighthouse.arc-ts.umich.edu
 ```
 
@@ -109,7 +109,7 @@ Host *
     IdentityFile ~/.ssh/id_rsa      # This set your default key for authentication
 
 Host artemis
-    User uniquename
+    User uniqname
     ForwardAgent yes
     # Forward your SSH agent, so you use your machine's ssh-agent to authenticate
     # to other machines from Artemis. This way you don't need to manage multiple

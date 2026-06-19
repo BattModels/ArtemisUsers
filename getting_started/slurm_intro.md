@@ -74,7 +74,7 @@ sacctmgr show user $(whoami) WithAssoc WOPLimits
 ---------- ---------- --------- ---------- ---------- ---------- --------- ------- -------- -------- --------- ----------- ----------- -------------------- ---------
       jdoe    venkvis0    None   greatlakes    engin1                    1                                      5000
       jdoe    venkvis0    None   greatlakes  venkvis0                    1                                      5000
-      jdoe     venkvis    None    ighthouse   venkvis                    1                                      5000
+      jdoe     venkvis    None   lighthouse   venkvis                    1                                      5000
 ```
 
 Here we can see that `jdoe` has `venkvis0` and `venkvis` as their default account. See [sbatch](https://slurm.schedmd.com/sbatch.html) for more information.
